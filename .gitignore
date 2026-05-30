@@ -11,6 +11,7 @@ target/
 .idea/libraries/
 *.iws
 *.iml
+.env
 *.ipr
 
 ### Eclipse ###
