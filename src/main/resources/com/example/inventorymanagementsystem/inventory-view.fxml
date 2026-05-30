@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="InventoryController">
+
+    <top>
+        <Label text="Inventory Management System"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+
+        <VBox spacing="15" style="-fx-padding:20;">
+
+            <GridPane hgap="10" vgap="10">
+
+                <Label text="Product Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+
+                <TextField fx:id="productNameField"
+                           promptText="Enter Product Name"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Quantity:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+                <TextField fx:id="quantityField"
+                           promptText="Enter Quantity"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Price:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+
+                <TextField fx:id="priceField"
+                           promptText="Enter Price"
+                           GridPane.rowIndex="2"
+                           GridPane.columnIndex="1"/>
+
+            </GridPane>
+
+            <HBox spacing="10">
+
+                <Button fx:id="addButton"
+                        text="Add"
+                        prefWidth="100"/>
+
+                <Button fx:id="updateButton"
+                        text="Update"
+                        prefWidth="100"/>
+
+                <Button fx:id="deleteButton"
+                        text="Delete"
+                        prefWidth="100"/>
+
+                <Button fx:id="clearButton"
+                        text="Clear"
+                        prefWidth="100"/>
+
+            </HBox>
+
+            <TableView fx:id="productTable"
+                       prefHeight="400">
+
+                <columns>
+
+                    <TableColumn fx:id="idColumn"
+                                 text="ID"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="nameColumn"
+                                 text="Product Name"
+                                 prefWidth="250"/>
+
+                    <TableColumn fx:id="quantityColumn"
+                                 text="Quantity"
+                                 prefWidth="150"/>
+
+                    <TableColumn fx:id="priceColumn"
+                                 text="Price"
+                                 prefWidth="150"/>
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </center>
+
+    <bottom>
+
+        <Label fx:id="statusLabel"
+               text="Ready"
+               style="-fx-padding:10;"/>
+
+    </bottom>
+
+</BorderPane>
